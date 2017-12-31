@@ -13,6 +13,8 @@
     "flow-typed": "rimraf flow-typed/npm && flow-typed install --overwrite || true",
     "lint": "eslint --cache --format=node_modules/eslint-formatter-pretty .",
     "lint-style": "stylelint src/*.scss src/components/*.scss --syntax scss",
+    "lint-styles-fix": "stylefmt -r src/*.scss src/components/*.scss",
+    "deploy": "yarn clean && yarn build && gh-pages -d dist -b gh-pages -m '☄️ Deploy'",
     "clean": "rimraf dist && rimraf flow-typed/npm"
   },
   "dependencies": {

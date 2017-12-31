@@ -1,0 +1,18 @@
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #f8f8f8;
+  font-family: 'Quicksand-Regular';
+
+  .head {
+    font-size: 3em;
+  }
+
+  .body {
+    font-size: 1.2em;
+  }
+}

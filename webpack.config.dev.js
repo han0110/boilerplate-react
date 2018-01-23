@@ -1,16 +1,9 @@
-const path = require('path');
-const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   devtool: 'cheap-module-source-map',
   entry: ['babel-polyfill', './src/index.js'],
-  output: {
-    publicPath: '/',
-    path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
-  },
   module: {
     rules: [
       {
@@ -59,9 +52,6 @@ module.exports = {
         js: ['bundle.js'],
         css: ['style.css'],
       },
-    }),
-    new webpack.ProvidePlugin({
-      d3: 'd3',
     }),
   ],
   devServer: {

@@ -7,7 +7,6 @@ module.exports = {
   devtool: 'cheap-module-source-map',
   entry: ['babel-polyfill', './src/index.js'],
   output: {
-    publicPath: '/',
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
   },

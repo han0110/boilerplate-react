@@ -10,15 +10,12 @@ This boilerplate is built with React by Webpack.
 
 ## 1. Getting Started
 
-### 1.1 Prerequisites
-
-* [gh-pages](https://github.com/tschaub/gh-pages#command-line-utility) - Package for publishing files to a gh-pages branch on GitHub
-
-### 1.2 Installing
+### 1.1 Installing
 
 ```
 git clone https://github.com/han0110/boilerplate-react && cd boilerplate-react
 npm install
+rm -rf ./.git
 ```
 
 To dev
@@ -40,12 +37,20 @@ npm run deploy
 
 ### 2.1 style linting
 
-- Lintint
+- JS linting
+
+```
+npm run lint
+```
+
+- CSS linting
+
 ```
 npm run lint-styles
 ```
 
-- Autofix
+- CSS autofix
+
 ```
 npm run lint-styles-fix
 ```

@@ -18,7 +18,6 @@
     "clean": "rimraf dist && rimraf flow-typed/npm"
   },
   "dependencies": {
-    "node-sass": "^4.7.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },
@@ -44,6 +43,7 @@
     "flow-typed": "^2.2.3",
     "gh-pages": "^1.1.0",
     "html-webpack-plugin": "^2.30.1",
+    "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "stylefmt": "^6.0.0",

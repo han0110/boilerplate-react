@@ -4,8 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  devtool: 'cheap-module-source-map',
-  entry: ['babel-polyfill', './src/index.js'],
+  entry: { index: './src/index.js' },
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
@@ -59,9 +58,9 @@ module.exports = {
         css: ['style.css'],
       },
     }),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: { warnings: false },
-      sourceMap: true,
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
     }),
+    new webpack.optimize.UglifyJsPlugin(),
   ],
 };

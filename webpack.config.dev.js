@@ -3,39 +3,40 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   devtool: 'cheap-module-source-map',
-  entry: ['babel-polyfill', './src/index.js'],
+  entry: { index: './src/index.js' },
   module: {
     rules: [
       {
         test: /\.jsx?$/,
-        loaders: ['babel-loader'],
+        loader: 'babel-loader',
         exclude: /node_modules/,
       },
       {
-        test: /\.global\.(css|scss|sass)$/,
-        use: ExtractTextPlugin.extract({
-          use: [{
-            loader: 'css-loader',
-          }, {
-            loader: 'sass-loader',
-          }],
-          fallback: 'style-loader',
-        }),
+        test: /\.global\.scss$/,
+        use: [{
+          loader: 'style-loader',
+        }, {
+          loader: 'css-loader',
+          options: { sourceMap: true },
+        }, {
+          loader: 'sass-loader',
+        }],
       },
       {
-        test: /^((?!\.global).)*\.(css|scss|sass)$/,
-        use: ExtractTextPlugin.extract({
-          use: [{
-            loader: 'css-loader',
-            options: {
-              modules: true,
-              importLoaders: 1,
-              localIdentName: '[name]__[local]__[hash:base64:5]',
-            },
-          }, {
-            loader: 'sass-loader',
-          }],
-        }),
+        test: /^((?!\.global).)*\.scss$/,
+        use: [{
+          loader: 'style-loader',
+        }, {
+          loader: 'css-loader',
+          options: {
+            modules: true,
+            sourceMap: true,
+            importLoaders: 1,
+            localIdentName: '[name]__[local]__[hash:base64:5]',
+          },
+        }, {
+          loader: 'sass-loader',
+        }],
       },
       {
         test: /\.(bmp|gif|jpg|jpeg|png|svg|webp|ttf|otf)$/,
@@ -44,7 +45,6 @@ module.exports = {
     ],
   },
   plugins: [
-    new ExtractTextPlugin('style.css'),
     new HtmlWebpackPlugin({
       template: './static/template.html',
       favicon: './static/favicon.ico',

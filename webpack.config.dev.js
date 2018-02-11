@@ -1,5 +1,4 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   devtool: 'cheap-module-source-map',
@@ -17,7 +16,6 @@ module.exports = {
           loader: 'style-loader',
         }, {
           loader: 'css-loader',
-          options: { sourceMap: true },
         }, {
           loader: 'sass-loader',
         }],
@@ -30,7 +28,6 @@ module.exports = {
           loader: 'css-loader',
           options: {
             modules: true,
-            sourceMap: true,
             importLoaders: 1,
             localIdentName: '[name]__[local]__[hash:base64:5]',
           },

@@ -40,19 +40,13 @@ npm run deploy
 - JS linting
 
 ```
-npm run lint
+npm run lint:js
 ```
 
 - CSS linting
 
 ```
-npm run lint-styles
-```
-
-- CSS autofix
-
-```
-npm run lint-styles-fix
+npm run lint:css
 ```
 
 ### 2.2 flow checking

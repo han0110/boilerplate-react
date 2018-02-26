@@ -32,7 +32,7 @@ module.exports = [
   {
     test: /\.otf/,
     exclude: /node_modules/,
-    loader: "url-loader?limit=30000&mimetype=application/octet-stream&name=assets/fonts/[hash].[ext]"
+    loader: "url-loader?limit=10000&mimetype=application/octet-stream&name=assets/fonts/[hash].[ext]"
   },
   {
     test: /\.jpg/,

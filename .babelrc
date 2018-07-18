@@ -1,7 +1,5 @@
 {
-  "presets": [
-    "es2015",
-    "stage-0",
-    "react"
-  ]
+  "ignore": ["node-modules/**"],
+  "presets": ["@babel/preset-react", "@babel/preset-env", "@babel/preset-flow"],
+  "plugins": ["@babel/plugin-proposal-object-rest-spread"]
 }

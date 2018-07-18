@@ -1,9 +1,6 @@
 # Compiled binary addons
 .eslintcache
 
-# Dependency directory
-node_modules
-
 # OSX
 .DS_Store
 
@@ -11,8 +8,4 @@ node_modules
 dist
 
 # flow-typed
-flow-typed/npm/*
-!flow-typed/npm/module_vx.x.x.js
-
-# server
-server.js
+flow-typed/*

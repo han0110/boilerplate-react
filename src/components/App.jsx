@@ -1,7 +1,6 @@
 // @flow
 
 import React, { Component } from 'react';
-import styles from './App.scss';
 
 type Props = {}
 
@@ -12,11 +11,16 @@ class App extends Component<Props, State> {
     super();
     this.state = {};
   }
+
   render() {
     return (
-      <div className={styles.wrapper}>
-        <div className={styles.head}>Hello world</div>
-        <div className={styles.body}>This is a boilerplate built by React</div>
+      <div className="wrapper">
+        <div className="head">
+          Hello world
+        </div>
+        <div className="body">
+          This is a boilerplate built by React
+        </div>
       </div>
     );
   }

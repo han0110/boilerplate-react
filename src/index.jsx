@@ -1,9 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './components/App';
-import './index.scss';
+// @flow
 
-ReactDOM.render(
+import React from 'react';
+import { render } from 'react-dom';
+import App from './components/App';
+import './styles/styles.scss';
+
+render(
   <App />,
   document.getElementById('root'),
 );

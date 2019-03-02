@@ -21,7 +21,7 @@ module.exports = {
     },
     lint: {
       description: 'lint *.js,*.jsx in src',
-      default: 'eslint --cache src && flow .',
+      default: 'eslint --cache --ext .jsx src && flow .',
     },
     deploy: {
       description: 'deploy to gh-page',
